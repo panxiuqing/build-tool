@@ -1,5 +1,5 @@
 {
-  "name": "build-tools",
+  "name": "yiyou-build-tools",
   "version": "1.0.0",
   "main": "index.js",
   "author": "pxq",
@@ -8,5 +8,8 @@
     "postcss": "^6.0.2",
     "postcss-sprites": "^4.2.1",
     "yargs": "^8.0.2"
+  },
+  "bin": {
+    "ybuild":     "./index.js"
   }
 }
