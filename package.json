@@ -1,6 +1,6 @@
 {
   "name": "yiyou-build-tools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "author": "pxq",
   "license": "MIT",
@@ -10,6 +10,11 @@
     "yargs": "^8.0.2"
   },
   "bin": {
-    "ybuild":     "./index.js"
+    "ybuild":     "./index.js",
+    "gifdiff": "./bin/gifdiff.exe",
+    "gifsicle": "./bin/gifsicle.exe",
+    "jpegtran": "./bin/jpegtran.exe",
+    "optipng": "./bin/optipng.exe",
+    "pngquent": "./bin/pngquant.exe"
   }
 }
