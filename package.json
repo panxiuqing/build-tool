@@ -1,6 +1,6 @@
 {
   "name": "yiyou-build-tools",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "main": "index.js",
   "author": "pxq",
   "license": "MIT",
@@ -15,6 +15,7 @@
     "gifsicle": "./bin/gifsicle.exe",
     "jpegtran": "./bin/jpegtran.exe",
     "optipng": "./bin/optipng.exe",
-    "pngquant": "./bin/pngquant.exe"
+    "pngquant": "./bin/pngquant.exe",
+    "cwebp": "./bin/cwebp.exe"
   }
 }

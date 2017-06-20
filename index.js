@@ -2,6 +2,7 @@
 const yargs = require('yargs');
 const image2sprites = require('./lib/image2sprites');
 const image2js = require('./lib/image2js');
+const image2css = require('./lib/image2css');
 
 yargs.usage(
     '$0 <cmd> [...args]'
@@ -38,3 +39,9 @@ yargs.usage(
 )
 .help()
 .argv
+
+module.exports = {
+    image2js,
+    image2css,
+    image2sprites
+}
