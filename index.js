@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const {spawn} = require('child_process');
 const yargs = require('yargs');
 const image2sprites = require('./lib/image2sprites');
 const image2js = require('./lib/image2js');
@@ -7,7 +8,7 @@ const image2css = require('./lib/image2css');
 yargs.usage(
     '$0 <cmd> [...args]'
 )
-.command(
+    .command(
     'sprites [input] [output]',
     'generate style file and sprites image from images',
     {
@@ -21,8 +22,8 @@ yargs.usage(
     argv => {
         image2sprites(argv.input, argv.output);
     }
-)
-.command(
+    )
+    .command(
     'img2js [input] [output]',
     'generate es2015 module for [input]/*.png',
     {
@@ -36,9 +37,20 @@ yargs.usage(
     argv => {
         image2js(argv.input, argv.output);
     }
-)
-.help()
-.argv
+    )
+    .command(
+    'compressPNG',
+    'compress *.png',
+    {
+    },
+    argv => {
+        spawn('pngquant.cmd', ['*.png', '--ext', '.png', '--force'], {
+            cwd: __dirname
+        });
+    }
+    )
+    .help()
+    .argv
 
 module.exports = {
     image2js,
