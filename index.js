@@ -45,7 +45,7 @@ yargs.usage(
     },
     argv => {
         spawn('pngquant.cmd', ['*.png', '--ext', '.png', '--force'], {
-            cwd: __dirname
+            cwd: './'
         });
     }
     )
